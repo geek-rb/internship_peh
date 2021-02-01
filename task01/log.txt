@@ -1,0 +1,11 @@
+commit c130196671e5b52b48296c0a6c7ad10763169f98
+Author: Yury <pehsysadm@gmail.com>
+Date:   Mon Feb 1 19:23:05 2021 +0300
+
+    extend status.txt
+
+commit dd5a10d94e9fdee6871f45ce4cc9395a62773f9e
+Author: Yury <pehsysadm@gmail.com>
+Date:   Mon Feb 1 19:06:05 2021 +0300
+
+    add .gitignore
