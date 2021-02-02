@@ -1,3 +1,4 @@
 *.iml
 .slime/
 out/
+.help/
