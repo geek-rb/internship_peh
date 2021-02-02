@@ -28,7 +28,7 @@ Project is: _in progress_
 
 - [X] Lesson 01
     - [x] main task
-    - [ ] extend task
+    - [x] extend task
 - [ ] Lesson 02
     - [ ] main task
     - [ ] extend ta
