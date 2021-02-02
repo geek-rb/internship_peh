@@ -5,12 +5,12 @@
 
 ##### [X] 1. Install docker. (Extra points: install docker for both platforms(linux and windows)). Hint: please use VMs for this.
 
-![Windows](./img/docker_win.png)
-![Ubuntu](./img/docker_ubuntu.png)
+![Windows](./.img/docker_win.png)
+![Ubuntu](./.img/docker_ubuntu.png)
 
 ##### [X] 2. Find, download and run any docker container "hello world". (Learn commands and parameters to create/run docker containers. (Extra points: use image with html page, edit html page and paste text: <Username> Exadel Sandbox 2021)
 
-![Windows2](./img/docker_win2.png)
+![Windows2](./.img/docker_win2.png)
 
 ##### [ ] 3. A) Create your Dockerfile for building a docker image. Your docker image should run any web application (nginx, apache, https). Web application should be located inside the docker image. (Extra points: for creating docker image use clear basic images (ubuntu, centos, alpine and etc.))
 ##### B) add an environment variable "DEVOPS=<username> to your docker image (Extra points: print environment variable with the value on a web page (if environment variable changed - the web page must be updated with a new value)
