@@ -1,8 +1,9 @@
-FROM ubuntu:20.10
+FROM alpine:3.13.1
 LABEL maintainer="geek-rb"
-RUN apt update && apt-get upgrade -y
-RUN apt install nginx -y
-ARG DEVOPS
+#RUN apt update && apt-get upgrade -y
+#RUN apt install nginx -y
+RUN apk -U add nginx
+#ARG DEVOPS
 #ENV DEVOPS1=%DEVOPS%
 ENV DEVOPS=$DEVOPS
 #ENV DEVOPS3=$env:DEVOPS
