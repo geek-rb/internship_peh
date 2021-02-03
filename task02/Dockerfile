@@ -1,7 +1,7 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.10
 LABEL maintainer="geek-rb"
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install nginx -y
+RUN apt update && apt-get upgrade -y
+RUN apt install nginx -y
 ARG DEVOPS
 #ENV DEVOPS1=%DEVOPS%
 ENV DEVOPS=$DEVOPS
