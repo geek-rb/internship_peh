@@ -1,13 +1,19 @@
 FROM alpine:3.13.1
 LABEL maintainer="geek-rb"
-#RUN apt update && apt-get upgrade -y
-#RUN apt install nginx -y
-RUN apk -U add nginx
-#ARG DEVOPS
-#ENV DEVOPS1=%DEVOPS%
+RUN apk -U add nginx \
+#create pid for gnix because ver alpine 1.13.1;)
+&& mkdir -p /run/nginx \
+#create config www
+&& printf 'server\n {listen 80 default_server;\nroot /var/www;\n}\n' > /etc/nginx/http.d/default.conf
+
+ARG DEVOPS=$DEVOPS
 ENV DEVOPS=$DEVOPS
-#ENV DEVOPS3=$env:DEVOPS
-#RUN setx /M DEVOPS "%DEVOPS%"
 EXPOSE 80
-STOPSIGNAL SIGTERM
-CMD ["nginx", "-g", "daemon off;"]
+
+#create primitive wraper.sh
+RUN printf '#!/bin/sh\n' > /home/wraper.sh \
+&& printf 'echo "Run variable DEVOPS:$DEVOPS" > /var/www/index.html\n' >> /home/wraper.sh \
+&& printf 'nginx -g "daemon off;"\n' >> /home/wraper.sh  \
+&& chmod +x /home/wraper.sh
+
+CMD ["./home/wraper.sh"]
