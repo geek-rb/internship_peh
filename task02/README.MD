@@ -3,17 +3,19 @@
 > Docker hub ID 666pehid666
 > 
 
-##### 1. Install docker. (Extra points: install docker for both platforms(linux and windows)). Hint: please use VMs for this.
+##### [DONE] 1. Install docker. (Extra points: install docker for both platforms(linux and windows)). Hint: please use VMs for this.
 
 ![Windows](./.img/docker_win.png)
 ![Ubuntu](./.img/docker_ubuntu.png)
 
-##### 2. Find, download and run any docker container "hello world". (Learn commands and parameters to create/run docker containers. (Extra points: use image with html page, edit html page and paste text: <Username> Exadel Sandbox 2021)
+##### [DONE] 2. Find, download and run any docker container "hello world". (Learn commands and parameters to create/run docker containers. (Extra points: use image with html page, edit html page and paste text: <Username> Exadel Sandbox 2021)
 
 ![Windows2](./.img/docker_win2.png)
 
-##### 3. A) Create your Dockerfile for building a docker image. Your docker image should run any web application (nginx, apache, https). Web application should be located inside the docker image. (Extra points: for creating docker image use clear basic images (ubuntu, centos, alpine and etc.))
+##### [DONE] 3. A) Create your Dockerfile for building a docker image. Your docker image should run any web application (nginx, apache, https). Web application should be located inside the docker image. (Extra points: for creating docker image use clear basic images (ubuntu, centos, alpine and etc.))
 ##### B) add an environment variable "DEVOPS=<username> to your docker image (Extra points: print environment variable with the value on a web page (if environment variable changed - the web page must be updated with a new value)
+
+Dockerfile in folder task02
 
 ##### 4. Push your docker image to docker hub (https://hub.docker.com/). Create any description for your Docker image. Integrate your docker image and your  github repository (Extra points: create automatically deployment for each push)
 
