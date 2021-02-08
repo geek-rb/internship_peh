@@ -10,11 +10,13 @@
 * [Contact](#contact)
 
 ## General info
-Intensive study by Exadel
+Intensive by Exadel
 
 ## Technologies
 * Git
 * Docker
+* Ansible
+* Jenkins
 * waiting...
 
 ## Code Examples
@@ -28,13 +30,18 @@ Intensive study by Exadel
 ## Status
 Project is: _in progress_
 
-- [X] Lesson 01
+- [X] Lesson 01 GIT
     - [x] main task
     - [x] extend task
-- [ ] Lesson 02
+- [x] Lesson 02 DOCKER
+    - [x] main task
+    - [x] extend task
+- [x] Lesson 03 ANSIBLE
+    - [x] main task
+    - [ ] extend task
+- [ ] Lesson 04 JENKINS
     - [ ] main task
-    - [ ] extend ta
-
+    - [ ] extend task
 
 
 
