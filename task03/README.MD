@@ -34,7 +34,8 @@
 > run:  ansible-playbook pb_web_nginx.yml --ask-become-pass
 4. \* Написать плейбук по установке одного из (LAMP/LEMP стек, Wordpress, ELK, MEAN) - GALAXY нельзя
 ***hardcore - вышесказанные плейбуки не должны иметь дефолтных кредов к базам данных и/или админка
-> [DRAFT]
-> git: pb_elk.yml
+> git: pb_elk.yml основной плэйбук
 >
+> git: pb_elk.yml переменные для плэйбука
 >
+> run: ansible-playbook pb_elk.yml --ask-become-pass

@@ -1,0 +1,5 @@
+[web]
+web01-ub ansible_host=192.168.100.61
+
+[db]
+db01-deb ansible_host=192.168.100.26

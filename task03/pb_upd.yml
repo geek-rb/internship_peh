@@ -1,0 +1,20 @@
+---
+#Playbook for upd
+
+- hosts: all
+
+  tasks:
+    - name: update
+      become: yes
+      apt:
+        cache_valid_time: 3600 #if older
+        update_cache: yes
+        
+    - name: upgrade
+      become: yes
+      apt:
+        upgrade: yes #full?
+    
+    - name: reboot
+      become: yes
+      reboot:

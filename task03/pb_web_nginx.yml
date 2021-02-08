@@ -1,4 +1,5 @@
 ---
+#Playbook for nginx, one-string syntaxis
 - name: install nginx
   hosts: web
   become: yes
