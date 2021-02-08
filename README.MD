@@ -1,5 +1,7 @@
 # Internship DevOps
-> Noobs
+> Noobs in da house
+>
+> ментор Роман
 
 ## Table of contents
 * [General info](#general-info)

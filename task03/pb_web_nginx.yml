@@ -1,0 +1,15 @@
+---
+- name: install nginx
+  hosts: web
+  become: yes
+
+  tasks:
+
+  - name: test connection
+    ping:
+
+  - name: install latest nginx
+    apt: name=nginx state=latest
+
+  - name: start nginx service
+    service: name=nginx state=started enabled=yes

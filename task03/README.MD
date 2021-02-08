@@ -22,15 +22,17 @@
 
 1. Установить Ансибл версии 2.8.10 (можно другую версию, но на свой страх и риск) на свой дистрибутив
 > apt-add-repository --yes --update ppa:ansible/ansible
-
 > apt install python3-pip
-
 > pip3 install 'ansible==2.8.10'
 2. Ping pong - выполнить встроенную команду ансибла ping (для этого достаточно одной ВМ, но можно выполнить на нескольких - для наглядности)
 ![ping](./.img/ansibl_ping.png)
 3. Мой Первый Плейбук - написать плейбук по установке nginx
  и выполнить его (плейбук положить в ситовый репозиторий для ознакомления)
 > git: pb_web_nginx.yml
+> run:  ansible-playbook pb_web_nginx.yml --ask-become-pass
 4. \* Написать плейбук по установке одного из (LAMP/LEMP стек, Wordpress, ELK, MEAN) - GALAXY нельзя
->
 ***hardcore - вышесказанные плейбуки не должны иметь дефолтных кредов к базам данных и/или админка
+> [DRAFT]
+> git: pb_elk.yml
+>
+>
