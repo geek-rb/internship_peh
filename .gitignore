@@ -4,3 +4,4 @@ out/
 .help/
 task02/docker_w_home/
 task02/list.txt
+*.help
