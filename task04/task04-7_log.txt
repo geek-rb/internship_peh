@@ -1,0 +1,82 @@
+Started by user sa
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/jenkins_home/workspace/task4-7
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Prepare)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (get reps)
+[Pipeline] git
+The recommended git tool is: NONE
+using credential user-pass-github
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/geek-rb/test-jenkins # timeout=10
+Fetching upstream changes from https://github.com/geek-rb/test-jenkins
+ > git --version # timeout=10
+ > git --version # 'git version 2.11.0'
+using GIT_SSH to set credentials user-pass-github
+ > git fetch --tags --progress -- https://github.com/geek-rb/test-jenkins +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 6765d5b9a9153bcc39862b22f4370aaa7b063936 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 6765d5b9a9153bcc39862b22f4370aaa7b063936 # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D master # timeout=10
+ > git checkout -b master 6765d5b9a9153bcc39862b22f4370aaa7b063936 # timeout=10
+Commit message: "Update Dockerfile"
+ > git rev-list --no-walk 6765d5b9a9153bcc39862b22f4370aaa7b063936 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] fileExists
+[Pipeline] echo
+DOCKERFILE exist, begin build
+[Pipeline] withCredentials
+Masking supported pattern matches of $t5
+[Pipeline] {
+[Pipeline] sh
+Warning: A secret was passed to "sh" using Groovy String interpolation, which is insecure.
+		 Affected argument(s) used the following variable(s): [t5]
+		 See https://jenkins.io/redirect/groovy-string-interpolation for details.
++ docker build --build-arg PASSWORD=**** -t task4-7/id-21 .
+Sending build context to Docker daemon  65.02kB
+
+Step 1/8 : FROM alpine:3.13.1
+ ---> e50c909a8df2
+Step 2/8 : LABEL maintainer="geek-rb"
+ ---> Using cache
+ ---> 1249558b5e6a
+Step 3/8 : RUN apk -U add nginx && mkdir -p /run/nginx && printf 'server\n {listen 80 default_server;\nroot /var/www;\n}\n' > /etc/nginx/http.d/default.conf
+ ---> Using cache
+ ---> 8c940c8e9374
+Step 4/8 : ARG PASSWORD
+ ---> Using cache
+ ---> b48c1889ebe8
+Step 5/8 : ENV PASSWORD=$PASSWORD
+ ---> Using cache
+ ---> c91efe9a0c4f
+Step 6/8 : EXPOSE 80
+ ---> Using cache
+ ---> d130eaf4ad17
+Step 7/8 : RUN printf '#!/bin/sh\n' > /home/wraper.sh && printf 'echo "Run variable PASSWORD:$PASSWORD" > /var/www/index.html\n' >> /home/wraper.sh && printf 'nginx -g "daemon off;"\n' >> /home/wraper.sh  && chmod +x /home/wraper.sh
+ ---> Using cache
+ ---> c7062b2e12f0
+Step 8/8 : CMD ["./home/wraper.sh"]
+ ---> Using cache
+ ---> fb89ee607c32
+Successfully built fb89ee607c32
+Successfully tagged task4-7/id-21:latest
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
