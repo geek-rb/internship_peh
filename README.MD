@@ -39,8 +39,8 @@ Project is: _in progress_
 - [x] Lesson 03 ANSIBLE
     - [x] main task
     - [x] extend task
-- [ ] Lesson 04 JENKINS
-    - [ ] main task
+- [x] Lesson 04 JENKINS
+    - [x] main task
     - [ ] extend task
 
 
