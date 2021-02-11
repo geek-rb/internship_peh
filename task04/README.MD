@@ -61,8 +61,8 @@ in git: task04-7.groovy
 ```
 <details>
 <summary>Workflow screenshots</summary>
-<img src="./.img/task4-7_1.png" />
-<img src="./.img/task4-7_2.png" />
+<img src="./.img/task4-7-4.png" />
+<img src="./.img/task4-7-5.png" />
 </details>
 
 

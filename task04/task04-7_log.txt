@@ -2,10 +2,12 @@ Started by user sa
 Running in Durability level: MAX_SURVIVABILITY
 [Pipeline] Start of Pipeline
 [Pipeline] node
-Running on Jenkins in /var/jenkins_home/workspace/task4-7
+Running on Jenkins in /var/jenkins_home/workspace/task4-8
 [Pipeline] {
 [Pipeline] stage
 [Pipeline] { (Prepare)
+[Pipeline] echo
+ Prepare...
 [Pipeline] }
 [Pipeline] // stage
 [Pipeline] stage
@@ -38,14 +40,14 @@ Commit message: "Update Dockerfile"
 [Pipeline] echo
 DOCKERFILE exist, begin build
 [Pipeline] withCredentials
-Masking supported pattern matches of $t5
+Masking supported pattern matches of $T5
 [Pipeline] {
 [Pipeline] sh
 Warning: A secret was passed to "sh" using Groovy String interpolation, which is insecure.
-		 Affected argument(s) used the following variable(s): [t5]
+		 Affected argument(s) used the following variable(s): [T5]
 		 See https://jenkins.io/redirect/groovy-string-interpolation for details.
-+ docker build --build-arg PASSWORD=**** -t task4-7/id-21 .
-Sending build context to Docker daemon  65.02kB
++ docker build --build-arg PASSWORD=**** -t task4-7/id-40 .
+Sending build context to Docker daemon  69.63kB
 
 Step 1/8 : FROM alpine:3.13.1
  ---> e50c909a8df2
@@ -71,9 +73,21 @@ Step 8/8 : CMD ["./home/wraper.sh"]
  ---> Using cache
  ---> fb89ee607c32
 Successfully built fb89ee607c32
-Successfully tagged task4-7/id-21:latest
+Successfully tagged task4-7/id-40:latest
+[Pipeline] echo
+task4-7/id-40
 [Pipeline] }
 [Pipeline] // withCredentials
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] sh
++ grep+ docker image inspect task4-7/id-40
+ PASSWORD=
+[Pipeline] echo
+If you view pass in text bellow - test passed ;) : "PASSWORD=QWERTY!"
+                "PASSWORD=QWERTY!"
 [Pipeline] }
 [Pipeline] // stage
 [Pipeline] }
