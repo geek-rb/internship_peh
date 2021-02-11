@@ -2,33 +2,69 @@
 > Jenkins. Автоматизируй, Управляй и Контролируй
 
 [DONE] 0. Почитать про Jenkins. Что это такое и для чего он нужен? Способы применения. Что такое императивное и декларативное программирование
+```
+почитано)
+```
 
 [DONE] 1. Установить Jenkins (необходимо использовать Jenkins в Docker)
-> git: Dockerfile
+```
+in git: Dockerfile
+```
 
 [DONE] 2. Установить необходимые плагины (если потребуются на ваше усмотрение)
+```
+установлено)
+```
 
 [DONE] 3. Настроить несколько билд агентов
-
-![4-3](./.img/task4-3.png)
+```
+скриншот
+```
+<details>
+<summary>Workflow screenshots</summary>
+<img src="./.img/task4-3.png" />
+</details>
 
 [DONE] 4. Создать Freestyle project. Который будет в результате выполнения на экран выводить текущее время
-
-![4-4](./.img/task4-4.png)
+```
+скриншот
+```
+<details>
+<summary>Workflow screenshots</summary>
+<img src="./.img/task4-4.png" />
+</details>
 
 [DONE] 5. Создать Pipeline который будет на хосте выполнять команду docker ps -a
-
-![4-5](./.img/task4-5.png)
+```
+скриншот
+```
+<details>
+<summary>Workflow screenshots</summary>
+<img src="./.img/task4-5.png" />
+</details>
 
 [DONE] 6. Создать Pipeline который будет выкачивать из вашего репозитория код и будет собирать докер образ из вашего Dockerfile (который вы писали во время знакомства с докером)
-> https://github.com/geek-rb/test-jenkins/blob/master/Dockerfile (for fastest minimal download - new rep)
->
-> git: task04-6_log.txt
->
-![4-6](./.img/task4-5.png)
+```
+for fastest minimal download - new rep https://github.com/geek-rb/test-jenkins/blob/master/Dockerfile
+in git: task04-6_log.txt
+```
+<details>
+<summary>Workflow screenshots</summary>
+<img src="./.img/task4-6.png" />
+</details>
 
+[DONE] 7. Передать переменную PASSWORD=QWERTY! В зашифрованном виде в докер контейнер
 
-7. Передать переменную PASSWORD=QWERTY! В зашифрованном виде в докер контейнер
+```
+in git: task04-7_log.txt
+in git: task04-7.groovy
+```
+<details>
+<summary>Workflow screenshots</summary>
+<img src="./.img/task4-7_1.png" />
+<img src="./.img/task4-7_2.png" />
+</details>
+
 
 
 Бонусные задания:
