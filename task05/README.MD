@@ -14,12 +14,15 @@
  >   Данные брать из https://docs.google.com/spreadsheets/d/1Idg3vRAl83I3SqWqEyqAgKkj6TG9jrPhbIYWMFOJOaY/edit#gid=255060736
 ```
 пробуем stack вместо compose, гугл сказал что это модно/стильно/молодежно))
-скриншот
 git: docker-compose.yml
 ```
 ---
 3. [DONE] [EXTRA] Написать SQL скрипт, который будет заполнять базу данных и проверять на наличие уже существующих таблиц/записей.
 ```
+git 5-3_import.sql
+```
+<details>
+<summary>Workflow</summary>
 \echo "=================IMPORT CSV students======================"
 DROP TABLE IF EXISTS students_import, result_import;
 
@@ -71,16 +74,24 @@ WHERE Student NOT IN (SELECT student FROM students);
 INSERT INTO result (StudentID, Task1, Task2, Task3, Task4)
 SELECT StudentID, Task1, Task2, Task3, Task4 FROM result_import
 WHERE StudentID NOT IN (SELECT StudentID from result);
-```
+</details>
+
 ---
 4. [DONE] Написать запрос который по вашей фамилии будет находить информацию по выполненным заданиям и выводить результат на экран
 ```
+git 5-4_search.sql
+```
+<details>
+<summary>Workflow</summary>
 SELECT * FROM result
 WHERE StudentID = (SELECT StudentID FROM students WHERE Student LIKE '%Pekhockij%');
+</details>
 
-```
 ---
 5. [STUCK] Настроить репликацию SQL базы данных (Master->Slave)
+```
+stop on set establish replication
+```
 ---
 6. Обновить контейнер с базой данных (Взять за основу существующий докер образ и написать докерфайл в котором добавить переменную USERNAME) и запустить новую версию докер контейнера
 ---
