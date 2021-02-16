@@ -30,17 +30,23 @@ Intensive by Exadel
 ## Status
 Project is: _in progress_
 
-- [X] Lesson 01 GIT
+- [X] Task 01 GIT
     - [x] main task
     - [x] extend task
-- [x] Lesson 02 DOCKER
+- [x] Task 02 DOCKER
     - [x] main task
     - [x] extend task
-- [x] Lesson 03 ANSIBLE
+- [x] Task 03 ANSIBLE
     - [x] main task
     - [x] extend task
-- [x] Lesson 04 JENKINS
+- [x] Task 04 JENKINS
     - [x] main task
+    - [ ] extend task
+- [x] Task 05 DB
+    - [ ] main task
+    - [ ] extend task
+- [x] Task 06 Monitoring
+    - [ ] main task
     - [ ] extend task
 
 

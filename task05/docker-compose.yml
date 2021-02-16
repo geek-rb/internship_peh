@@ -1,0 +1,32 @@
+# docker stack deploy -c docker-compose.yml postgres
+# docker-compose up
+# docker stack ls
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    ports: 
+      - 5432:5432
+    env_file:
+      - db01.env
+    volumes: 
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - backend
+
+networks:
+  backend:
+
+volumes:
+  db-data:
