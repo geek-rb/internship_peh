@@ -1,0 +1,8 @@
+---
+- hosts: [zab]
+#  become: yes
+  vars:
+    zbx_srv: 192.168.100.51
+  roles:
+#- check
+    - zabbix_agent

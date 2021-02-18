@@ -1,0 +1,60 @@
+---
+##### Install zabbix-agent
+- name: install zabbix-agent
+  apt:
+    name: zabbix-agent
+    state: latest
+    update_cache: yes
+  #become: yes
+ 
+  #### enabled zabbix-agent
+- name: enable service zabbix-agent
+  systemd:
+    name: zabbix-agent
+    enabled: yes
+  #become: yes
+
+##### change zabbix_agentd.conf
+- name: change zabbix_agentd.conf Hostname
+  lineinfile:
+    path: /etc/zabbix/zabbix_agentd.conf
+    state: present
+    regexp: 'Hostname=Zabbix server'
+    line: "Hostname={{ ansible_hostname }}"
+  #become: yes
+    
+- name: change zabbix_agentd.conf ServerActive
+  lineinfile:
+    path: /etc/zabbix/zabbix_agentd.conf
+    state: present
+    regexp: 'ServerActive=127.0.0.1'
+    line: "ServerActive={{ zbx_srv }}"
+  #become: yes
+
+- name: change zabbix_agentd.conf Server
+  lineinfile:
+    path: /etc/zabbix/zabbix_agentd.conf
+    state: present
+    regexp: 'Server=127.0.0.1'
+    line: "Server={{ zbx_srv }}"
+  #become: yes
+
+- name: change zabbix_agentd.conf EnableRemoteCommands
+  lineinfile:
+    path: /etc/zabbix/zabbix_agentd.conf
+    state: present
+    regexp: '# EnableRemoteCommands=0'
+    line: 'EnableRemoteCommands=1'
+  #become: yes
+
+- name: change zabbix_agentd.conf LogRemoteCommands
+  lineinfile:
+    path: /etc/zabbix/zabbix_agentd.conf
+    state: present
+    regexp: '# LogRemoteCommands=0'
+    line: 'LogRemoteCommands=1'
+
+### Starting zabbix-agent
+- name: Make sure a service is started
+  systemd: state=started name=zabbix-agent
+  #become: yes

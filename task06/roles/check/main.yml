@@ -1,0 +1,7 @@
+---
+##### check server
+- name: ping hosts
+  ping:
+
+- name: check OS
+  debug: msg={{ansible_distribution}}-{{ansible_distribution_version}}

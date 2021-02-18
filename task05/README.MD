@@ -90,7 +90,7 @@ WHERE StudentID = (SELECT StudentID FROM students WHERE Student LIKE '%Pekhockij
 ---
 5. [STUCK] Настроить репликацию SQL базы данных (Master->Slave)
 ```
-stop on set establish replication
+stop on set establish replication, deadline happens)
 ```
 ---
 6. Обновить контейнер с базой данных (Взять за основу существующий докер образ и написать докерфайл в котором добавить переменную USERNAME) и запустить новую версию докер контейнера
