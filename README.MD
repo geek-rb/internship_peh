@@ -46,8 +46,12 @@ Project is: _in progress_
     - [ ] main task
     - [ ] extend task
 - [x] Task 06 Monitoring
-    - [ ] main task
+    - [x] main task
     - [ ] extend task
+- [x] Task 07 Project
+    - [x] main task
+- [x] Task 08 Monitoring
+    - [partialy] main task
 
 
 
