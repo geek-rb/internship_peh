@@ -17,15 +17,10 @@ Intensive by Exadel
 * Docker
 * Ansible
 * Jenkins
-* waiting...
-
-## Code Examples
-`git init`
-
-`git remote add origin https://github.com/geek-rb/internship_peh.git`
-
-`git pull`
-
+* Monitoring (ELK,Zabbix)
+* DB (postgres,Mysql,MongoDB)
+* Terraform
+* Clouds (AWS,GCP, Azure)
 
 ## Status
 Project is: _in progress_
